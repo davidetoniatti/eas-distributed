@@ -1,0 +1,14 @@
+name = "EaSClassifier"
+uuid = "13e67410-11c8-4f9b-9fd1-41a5052798f0"
+authors = ["Davide Toniatti <davide.toniatti@students.uniroma2.eu>"]
+version = "0.1.0"
+
+[deps]
+LinearAlgebra = "37e2e46d-f89d-539d-b4ee-838fcccc9c8e"
+Random = "9a3f8284-a2c9-5f02-9a11-845980a1fd5c"
+StatsBase = "2913bbd2-ae8a-5f71-8c99-4fb6c76f3a91"
+
+[compat]
+LinearAlgebra = "1.11.0"
+Random = "1.11.0"
+StatsBase = "0.34.6"

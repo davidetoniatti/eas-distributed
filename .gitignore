@@ -1,0 +1,16 @@
+Manifest.toml
+*.ji
+*.jl.cov
+*.jl.*.cov
+*.jl.mem
+*.jl.*.mem
+*.jl.gcov
+*.jl.*.gcov
+deps/build.log
+deps/deps.jl
+.vscode/
+.DS_Store
+Thumbs.db
+*~
+.ipynb_checkpoints/
+data/
