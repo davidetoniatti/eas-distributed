@@ -2,6 +2,24 @@ using CSV, DataFrames, MLUtils
 using BenchmarkTools
 using Profile
 
+using Distributed, DistributedArrays
+
+# The LinearAlgebra library is multithreaded;
+# to properly test performance improvements when using multiple processes,
+# the LinearAlgebra library should use fewer threads (ideally a single thread)
+
+BLAS.set_num_threads(1)
+
+addprocs(2)
+
+@everywhere begin
+    using Random, LinearAlgebra, DistributedArrays
+end
+
+@everywhere BLAS.set_num_threads(1)
+@everywhere using MKL
+@everywhere MKL.set_num_threads(1)
+
 # Dataset loading
 df = CSV.read("./data/mnist.csv", DataFrame)
 X = transpose(Matrix(df[:, 1:end-1]))
