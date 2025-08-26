@@ -8,7 +8,7 @@ This repository contains a distributed implementation of the **Expand-and-Sparsi
 
 This project provides a **distributed implementation** of the EaS algorithm described in the paper (Algorithm 1), using the **Julia programming language**.
 
-The implementation is distributed and uses the `Distributed` and `DistributedArrays` libraries. In particular, the training phase is distributed across
+The implementation uses the `Distributed` and `DistributedArrays` libraries. In particular, the training phase is distributed across
 multiple worker processes, where each worker is responsible for computing the weights with respect to a partition of the training set.
 
 ---
